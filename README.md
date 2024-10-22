@@ -20,3 +20,6 @@
 ` npm run dev`
 ` npm start`
 
+## URIs de Ejemplo
+
+` https://documenter.getpostman.com/view/5991112/2sAXxY4oNv`
