@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
 /*CARPETA ESTATICA*/
-app.arguments(express.static(__dirname + '/public'))
+app.use(express.static(__dirname + '/public'))
 
 /*CONEXION*/
 connection();
