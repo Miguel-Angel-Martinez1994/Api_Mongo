@@ -26,7 +26,7 @@ const getServicioById =async(req,res)=>{
         const id = req.params.id
         const servicioEncontrado = await Servicio.findById(id);
 
-        res.status(200).json({
+       return res.status(200).json({
             ok:true,
             msg:" servicio ID",
             data:servicioEncontrado
@@ -46,7 +46,7 @@ const createServicios =async(req,res)=>{
         const servicio = new Servicio(body)
         const crearServicios = await servicio.save()
 
-        res.status(201).json({
+       return res.status(201).json({
             ok:true,
             msg:"Creado servicio",
             data:crearServicios
@@ -73,7 +73,7 @@ const updateServicioById =async(req,res)=>{
             })
         }
 
-        res.status(200).json({
+      return  res.status(200).json({
             ok:true,
             msg:"actualizado servicio",
             data:servicio
@@ -99,7 +99,7 @@ const deleteServicioById =async(req,res)=>{
             })
         }
 
-        res.status(200).json({
+       return res.status(200).json({
             ok:true,
             msg:"Exito borrar servicio",
             data:servicioEliminado
@@ -139,7 +139,7 @@ const getProductosById =async(req,res)=>{
         const id = req.params.id
         const productoEncontrado = await Producto.findById(id);
 
-        res.status(200).json({
+       return res.status(200).json({
             ok:true,
             msg:" producto ID",
             data:productoEncontrado
@@ -159,7 +159,7 @@ const createProductos =async(req,res)=>{
         const producto = new Producto(body)
         const crearProductos = await producto.save()
 
-        res.status(201).json({
+       return res.status(201).json({
             ok:true,
             msg:"Creado producto",
             data:crearProductos
@@ -185,7 +185,7 @@ const updateProductoById =async(req,res)=>{
             })
         }
 
-        res.status(200).json({
+       return res.status(200).json({
             ok:true,
             msg:"actualizado producto",
             data:producto
@@ -210,7 +210,7 @@ const deleteProductoById =async(req,res)=>{
             })
         }
 
-        res.status(200).json({
+       return res.status(200).json({
             ok:true,
             msg:"Exito borrar producto",
             data:productoliminado
